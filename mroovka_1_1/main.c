@@ -60,12 +60,12 @@ int main ( int argc, char* argv[] )
 					if ( plansza->wart[antek->y][antek->x] == 0 )
                                         {
 						plansza->wart[antek->y][antek->x] = 1;
-                                                ruch( antek, 0 );
+                                                ruch( antek, 0, plansza );
                                         }
                                         else if ( plansza->wart[antek->y][antek->x] == 1 )
                                         {
 						plansza->wart[antek->y][antek->x] = 0;
-                                                ruch( antek, 1 );
+                                                ruch( antek, 1, plansza );
                                         }
 
 

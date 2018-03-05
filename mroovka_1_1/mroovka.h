@@ -15,7 +15,7 @@ typedef struct
 	kierunek_t kierunek;
 } *mrowka_t;
 
-void ruch ( mrowka_t mrowka, int kolor );
+void ruch ( mrowka_t mrowka, int kolor, macierz_t macierz );
 void odbicie ( mrowka_t mrowka, macierz_t macierz );
 
 #endif
