@@ -25,55 +25,19 @@ int main ( int argc, char* argv[] )
 	for( g = 0; g < kroki; g++ )
 	{
 		printf("\033[H\033[J");
-
-
-
-	/*	for ( i = 0; i < plansza->wiersze; i++ )
-		{
-			for ( j = 0; j < plansza->kolumny; j++ )
-			{
-				if ( j == antek->x && i == antek->y )
-				{
-					if ( plansza->wart[i][j] == 0 )
-					{
-						ruch( antek, 0 );
-						plansza->wart[i][j] = 1;
-					}
-					else if ( plansza->wart[i][j] == 1 )
-					{
-						ruch( antek, 1 );
-						plansza->wart[i][j] = 0;
-					}
-					stop = 1;
-					odbicie( antek, plansza);
-					break;
-				}
-			}
-			if ( stop == 1 )
-			{
-				stop = 0;
-				break;
-			}
-		}
-	*/
-		
-					if ( plansza->wart[antek->y][antek->x] == 0 )
-                                        {
-						plansza->wart[antek->y][antek->x] = 1;
-                                                ruch( antek, 0, plansza );
-                                        }
-                                        else if ( plansza->wart[antek->y][antek->x] == 1 )
-                                        {
-						plansza->wart[antek->y][antek->x] = 0;
-                                                ruch( antek, 1, plansza );
-                                        }
-
-
-
-
+		if ( plansza->wart[antek->y][antek->x] == 0 )
+                {
+			plansza->wart[antek->y][antek->x] = 1;
+                        ruch( antek, 0, plansza );
+                }
+                else if ( plansza->wart[antek->y][antek->x] == 1 )
+                {
+			plansza->wart[antek->y][antek->x] = 0;
+                        ruch( antek, 1, plansza );
+                }
 		wypisz( plansza, antek );
 		printf("%d: %dx%d\n\n", g+1, antek->x, antek->y);
-	//	usleep( 100000 );
+		usleep( 100000 );
 	}
 	return 0;
 }
