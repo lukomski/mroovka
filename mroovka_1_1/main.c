@@ -39,5 +39,6 @@ int main ( int argc, char* argv[] )
 		printf("%d: %dx%d\n\n", g+1, antek->x, antek->y);
 		usleep( 100000 );
 	}
+	printf("Copyright 2018, M. Osiak & K. Gawart\n\n");
 	return 0;
 }

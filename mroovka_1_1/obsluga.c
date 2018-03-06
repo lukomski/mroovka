@@ -11,9 +11,9 @@ void wypisz( macierz_t macierz, mrowka_t mrowka )
        		for ( j = 0; j < macierz->kolumny; j++ )
         	{
         		if ( j == mrowka->x && i == mrowka->y )
-        			printf("\x1B[36m m");
+        			printf("\x1B[35m m");
         		else if ( macierz->wart[i][j] == 1 )
-        			printf("\x1B[33m 1");
+        			printf("\x1B[32m 1");
         		else
         			printf("\x1B[37m 0");
         	}	
