@@ -55,11 +55,11 @@ int main ( int argc, char* argv[] )
 		
 
 		wypisz( plansza, antek, ilosc );
-		
+		printf("%c[%dm", 0x1B, 0);
 		printf("Krok: %d\n", g+1);
 		for ( j = 1; j< ilosc+1; j++ )
 		{
-			printf("\x1B[37m Mrowka nr %d: %dx%d\n", j, antek->x[j], antek->y[j]);
+			printf("Mrowka nr %d: %dx%d\n", j, antek->x[j], antek->y[j]);
 		}
 		if (g > 965 )
 			usleep( 1000000 );
