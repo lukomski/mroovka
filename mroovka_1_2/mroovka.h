@@ -17,5 +17,6 @@ typedef struct
 
 void ruch ( mrowka_t mrowka, int kolor, macierz_t macierz, int ktoramrowka );
 void odbicie ( mrowka_t mrowka, macierz_t macierz, int ktora );
+void rozdzielenie ( mrowka_t mrowka, int ilosc, int ktora );
 
 #endif

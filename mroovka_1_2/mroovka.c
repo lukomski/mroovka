@@ -74,3 +74,17 @@ void odbicie( mrowka_t mrowka, macierz_t macierz, int ktora )
 	else if ( mrowka->y[ktora] >= macierz->wiersze )
 		mrowka->y[ktora] = 0;
 }
+
+void rozdzielenie ( mrowka_t mrowka, int ilosc, int ktora) 
+{
+int i;
+	for ( i = ktora + 1; i< ilosc+1; i++ )
+	{
+		if ( mrowka->y[ktora] == mrowka->y[i] && mrowka->x[ktora] == mrowka->x[i] )
+		{
+		mrowka->kierunek[ktora] = PLN;
+		mrowka->kierunek[i] = PLD;
+		}
+	}
+
+}
