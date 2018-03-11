@@ -7,11 +7,34 @@
 
 int main ( int argc, char* argv[] )
 {
+	FILE * in = fopen ( "konffig.txt", "r" );
+	if ( in == NULL ) {
+        printf ("\nBrak pliku konfiguracyjnego.\n");
+        }
+	else
+	{ 
+	char* buff = malloc (sizeof(buff));
+	char** konfig = malloc (8* sizeof(konfig));
+	int m =0;
+
+	while ( fscanf (in, "%s", buff) != EOF) 
+		{
+		konfig[m] = buff;
+		printf ( "WYRAZ %d -> %s \n", m++, buff );
+		}
+	
+	fclose (in);	
+	}
+
+	usleep (5000000);	
+
 	int g, i, j, h, numer, ustaww, ustawk;
-	int w = argc > 1 ? atoi ( argv[1] ) : 50;
-	int k = argc > 2 ? atoi ( argv[2] ) : 50;
-	int kroki = argc > 3 ? atoi ( argv[3] ) : 1000;
-	int ilosc = argc > 4 ? atoi ( argv[4] ) : 5;
+
+
+	int w = argc > 1 ? atoi ( argv[1] ) : 25;
+	int k = argc > 2 ? atoi ( argv[2] ) : 25;
+	int kroki = argc > 3 ? atoi ( argv[3] ) : 100;
+	int ilosc = argc > 4 ? atoi ( argv[4] ) : 3;
 	macierz_t plansza = inicjuj( w, k );
 	mrowka_t antek = malloc( sizeof(antek) );
 
@@ -55,16 +78,16 @@ int main ( int argc, char* argv[] )
 		
 
 		wypisz( plansza, antek, ilosc );
-		printf("%c[%dm", 0x1B, 0);
+		
 		printf("Krok: %d\n", g+1);
 		for ( j = 1; j< ilosc+1; j++ )
 		{
-			printf("Mrowka nr %d: %dx%d\n", j, antek->x[j], antek->y[j]);
+			printf("\x1B[37m Mrowka nr %d: %dx%d\n", j, antek->x[j], antek->y[j]);
 		}
-		if (g > 965 )
-			usleep( 1000000 );
-		else
-			usleep( 30000 );
+//		if (g > 965 )
+//			usleep( 1000000 );
+//		else
+			usleep( 10000 );
 	}
 	return 0;
 }

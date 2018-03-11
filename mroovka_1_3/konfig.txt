@@ -1,0 +1,4 @@
+ilosc_wierszy 20
+ilosc_kolumn 10
+ilosc_krokow 111
+ilosc_mrowek 4
