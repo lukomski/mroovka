@@ -1,0 +1,11 @@
+JAK ROBIĆ DOKUMENTACJĘ:
+- czysty kod
+- komentarze
+  - szczegóły
+  - kiedy używamy generatorów dokumentacji
+  - zawiłe algorytmy
+  - odwołanie się do dokumentacji projektowej
+  - numery błędów (naprawionych - żeby widzieć ewentualne miejsca zmiany kody, które mogą generować nowe błędy)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!NIE NA OSTATNIĄ CHWILĘ!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
