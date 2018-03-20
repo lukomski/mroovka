@@ -18,10 +18,10 @@ int main ( int argc, char* argv[] )
                 return EXIT_FAILURE;
         }
 
-	int w = argc > 1 ? atoi ( argv[1] ) : 20;
-	int k = argc > 2 ? atoi ( argv[2] ) : 20;
-	int kroki = argc > 3 ? atoi ( argv[3] ) : 100;
-	int ilosc = argc > 4 ? atoi ( argv[4] ) : 3;
+	int w = argc > 1 ? atoi ( argv[1] ) : 600;
+	int k = argc > 2 ? atoi ( argv[2] ) : 600;
+	int kroki = argc > 3 ? atoi ( argv[3] ) : 200000;
+	int ilosc = argc > 4 ? atoi ( argv[4] ) : 1;
 
 	macierz_t plansza = inicjuj( w, k );
         mrowka_t antek = malloc( sizeof(antek) );
