@@ -104,7 +104,7 @@ int main ( int argc, char* argv[] )
 			rozdzielenie ( antek, ilosc, i );
 
 			numer = plansza->wart[antek->y[i]][antek->x[i]];
-			printf("\033[H\033[J");
+			//printf("\033[H\033[J");
 			if ( numer != i )
         	        {
 				plansza->wart[antek -> y[i] ][ antek -> x[i] ] = i;

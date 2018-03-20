@@ -1,7 +1,25 @@
 #include<stdio.h>
+#include<ctype.h>
+#include<string.h>
 #include"obsluga.h"
 #include"mroovka.h"
 #include"macierz.h"
+
+int czyLitera( int liczba, char* argumenty[] )
+{
+	int z, x;
+        for ( z = 1; z < liczba; z++ )
+        {
+                for ( x = 0; x < strlen( argumenty[z] ); x++ )
+                {
+                        //if ( argumenty[z][x] <= 57 && argumenty[z][x] >= 48 );
+			//else
+			if ( isalpha ( argumenty[z][x] ) != 0 )
+                        	return 1;
+                }
+        }
+	return 0;
+}
 
 void wypisz( macierz_t macierz, mrowka_t mrowka, int ilosc )
 {
