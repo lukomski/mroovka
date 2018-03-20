@@ -1,4 +1,4 @@
-wqJAK ROBIĆ DOKUMENTACJĘ:
+JAK ROBIĆ DOKUMENTACJĘ:
 - czysty kod
 - komentarze
   - szczegóły
