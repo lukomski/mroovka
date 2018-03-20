@@ -13,7 +13,7 @@ int main ( int argc, char* argv[] )
 	int w = argc > 1 ? atoi ( argv[1] ) : 50;
 	int k = argc > 2 ? atoi ( argv[2] ) : 50;
 	int kroki = argc > 3 ? atoi ( argv[3] ) : 800;
-	int ilosc = argc > 4 ? atoi ( argv[4] ) : 3;
+	int ilosc = argc > 4 ? atoi ( argv[4] ) : 6;
 	int czy_konsola = argc > 5 ? atoi ( argv[5] ) : 0; // czy czytanie z konsoli, 1=true
 
 	macierz_t plansza = inicjuj( w, k );
